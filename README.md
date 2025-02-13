@@ -52,3 +52,21 @@ resource "azurerm_virtual_network" "example" {
   address_space       = ["10.0.0.0/16"]
 }
 ```
+
+### State File
+
+1. This file tracks the state of the desired and actual infrastructure state
+2. This is usually not version controlled and usually stored in remote backends.
+3. Remote Backends -> Azure Blob, AWS S3
+
+
+### Variables
+
+1. Types
+    1. Input
+    2. Output
+    3. Local
+2. Precedence
+3. To specy var during runtime `terraform apply -env=environment=dev`
+4. To provide vars using environment variables, the variables has to be prefixed with *TF_VAR*
+5. If variables are to be defined in separae file, then it must be named *terraform.tfvars*

@@ -16,6 +16,12 @@ provider "azurerm" {
   features {}
 }
 
+variable "environment" {
+  type = string
+  description = "stage, prod"
+  default = "dev"
+}
+
 # Create a resource group
 resource "azurerm_resource_group" "basic" {
   name     = "terraform-learn"
@@ -31,6 +37,10 @@ resource "azurerm_storage_account" "basic" {
   account_replication_type = "GRS"
 
   tags = {
-    environment = "dev"
+    environment = var.environment
   }
+}
+
+output "storage_name" {
+  value = azurerm_storage_account.basic.name
 }

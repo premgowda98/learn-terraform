@@ -8,3 +8,4 @@
 4. Export env var specified in .env.tmpl in the terminal
 5. terraform init -> terraform validate -> terraform apply
 6. To delete the resources use `terraform destroy`
+7. Configure Remote Backend on [Azure](https://developer.hashicorp.com/terraform/language/backend/azurerm)
