@@ -70,3 +70,37 @@ resource "azurerm_virtual_network" "example" {
 3. To specy var during runtime `terraform apply -env=environment=dev`
 4. To provide vars using environment variables, the variables has to be prefixed with *TF_VAR*
 5. If variables are to be defined in separae file, then it must be named *terraform.tfvars*
+6. Data Types
+    1. String
+    2. List
+    3. Bool
+    4. Number
+    5. Set
+    6. Map
+    7. Object
+7. Map vs Object
+    1. Map can have only one type of data in the values `map(string)`
+    2. If each value to be of different data type, then we can use object.
+8. Meta Arguments
+    1. depends_on
+    2. count
+    3. for_each
+    4. provider
+    5. lifecycle
+
+
+### Lifecycle
+
+Defined inside resource block
+1. Create before destroy
+2. Prevent destroy
+3. Ignore Changes
+4. Custom Condition
+    1. precondition
+    2. postcondition
+
+### Expresions
+
+1. Dynamic
+2. Conditional
+
