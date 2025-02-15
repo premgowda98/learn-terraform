@@ -15,6 +15,8 @@
 4. Apply
 5. Destroy
 
+[Terraform Referrence](https://github.com/piyushsachdeva/Terraform-Full-Course-Azure/)
+
 ## Providers
 
 1. Terraform Providers version is differetnt from Terraform Version
@@ -104,3 +106,9 @@ Defined inside resource block
 1. Dynamic
 2. Conditional
 
+## [Functions](https://developer.hashicorp.com/terraform/language/functions)
+
+1. `terraform console`
+2. Terraform does not support custom functions
+
+## Data Sources
